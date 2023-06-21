@@ -25,10 +25,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   download-manager-server:
     image: 'ghcr.io/irohalab/mira-download-manager:${DOWNLOAD_MANAGER_TAG}'
@@ -50,10 +47,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   video-manager-job-scheduler:
     image: 'ghcr.io/irohalab/mira-video-manager:${VIDEO_MANAGER_TAG}'
@@ -76,10 +70,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   video-manager-job-executor:
     image: 'ghcr.io/irohalab/mira-video-manager:${VIDEO_MANAGER_TAG}'
@@ -103,10 +94,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   video-manager-api:
     image: 'ghcr.io/irohalab/mira-video-manager:${VIDEO_MANAGER_TAG}'
@@ -128,10 +116,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   video-manager-job-executor-file-server:
     image: 'ghcr.io/irohalab/mira-video-manager:${VIDEO_MANAGER_TAG}'
@@ -154,10 +139,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   albireo-server:
     image: 'ghcr.io/irohalab/albireo:${ALBIREO_TAG}'
@@ -180,10 +162,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
   albireo-scheduler:
     image: 'ghcr.io/irohalab/albireo:${ALBIREO_TAG}'
@@ -204,10 +183,7 @@ services:
     networks:
       - mira
     logging:
-      driver: json-file
-      options:
-        max_size: 10m
-        max_file: 5
+      driver: journald
 
 networks:
   mira:
