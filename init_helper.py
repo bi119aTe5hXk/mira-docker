@@ -75,14 +75,14 @@ if not postgres_password:
     postgres_password = token_hex(nbytes=16)
 
 db_name_albireo = prompt('database name for albireo (default is albireo): ')
-db_name_vm = prompt('database name for video manager (default is mira_video): ')
-db_name_dm = prompt('database name for download manager (default is mira_download): ')
+db_name_vm = prompt('database name for video manager (default is mira_video_manager): ')
+db_name_dm = prompt('database name for download manager (default is mira_downloader): ')
 if not db_name_albireo:
     db_name_albireo = 'albireo'
 if not db_name_vm:
-    db_name_vm = 'mira_video'
+    db_name_vm = 'mira_video_manager'
 if not db_name_dm:
-    db_name_dm = 'mira_download'
+    db_name_dm = 'mira_downloader'
 
 location_for_postgres_data = prompt('location for postgres data (press ENTER to use /data/postgres): ')
 if not location_for_postgres_data:
