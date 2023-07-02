@@ -21,7 +21,7 @@ services:
       - mira
     logging: *default-logging
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
+    image: lscr.io/linuxserver/qbittorrent:version-14.3.9.99202110311443-7435-01519b5e7ubuntu20.04.1
     profiles: ['prod', 'qbt']
     container_name: qbittorrent
     environment:
